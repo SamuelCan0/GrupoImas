@@ -1,0 +1,94 @@
+<div class="fondo">
+  <div class="col-sm-12">
+    <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle separacion" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Clasificación
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" (click)="clasificar('')">Todos</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('casa')">Casas</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('terreno')">Terrenos</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('departamento')">Departamentos</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('local')">Locales</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('cabaña')">Cabañas</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('oficina')">Oficinas</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('bodega')">Bodegas</a></li>
+        <li><a class="dropdown-item" (click)="clasificar('rancho')">Ranchos</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div *ngIf="portafolios==[]" class="centro">
+    <div class="spinner-border text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="p-5 banner">
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let p of portafolios">
+        <div *ngIf="clasifi=='' || clasifi==p.tipo">
+          <div class="card" *ngIf="p.tipo=='casa' || p.tipo=='departamento' || p.tipo=='cabaña'">
+            <img src="{{p.imagen1}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title titulo">{{p.titulo}}</h5>
+            </div>
+            <div class="card-footer items">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="./assets/img/bed.png" height="24px"> {{p.recamaras}} recamaras
+                </div>
+                <div class="col-sm-4">
+                  <img src="./assets/img/toilet.png" height="24px"> {{p.banos}} baños
+                </div>
+                <div class="col-sm-4">
+                  <img src="./assets/img/size.png" height="24px"> {{p.tamano}}m²
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <button type="button" class="btn btn-outline-info btn-sm" [routerLink]="['/detail',p._id]">Ver Más</button>
+            </div>
+          </div>
+          <div class="card" *ngIf="p.tipo=='local' || p.tipo=='oficina' ">
+            <img src="{{p.imagen1}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title titulo">{{p.titulo}}</h5>
+            </div>
+            <div class="card-footer items">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="./assets/img/toilet.png" height="24px"> {{p.banos}} baños
+                </div>
+                <div class="col-sm-4">
+                  <img src="./assets/img/size.png" height="24px"> {{p.tamano}}m²
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <button type="button" class="btn btn-outline-info btn-sm" [routerLink]="['/detail',p._id]">Ver Más</button>
+            </div>
+          </div>
+          <div class="card" *ngIf="p.tipo=='terreno' || p.tipo=='bodega' || p.tipo=='rancho'">
+            <img src="{{p.imagen1}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title titulo">{{p.titulo}}</h5>
+            </div>
+            <div class="card-footer items">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="./assets/img/size.png" height="24px"> {{p.tamano}}m²
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+
+              <button type="button" class="btn btn-outline-info btn-sm" [routerLink]="['/detail',p._id]">Ver Más</button>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

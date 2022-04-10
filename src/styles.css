@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/**body{
+  background: linear-gradient(90deg,#005673 0%,#005673 10%,#7dc7c7 10%,#7dc7c7 100%);
+}**/
+
+html, body { width:  100%; }
+body { margin: 0;}
+
+*{
+  font-family: 'Avenir Roman', sans-serif !important;
+}
+
+
+@font-face {
+  font-family: 'Avenir Roman';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Roman'), url('./assets/fonts/avenir_roman_12.woff') format('woff');
+}
+
+
+

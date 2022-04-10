@@ -1,0 +1,86 @@
+.body{
+  position: relative;
+  background: url('./bg/oficina.png');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 200px;
+}
+
+.center{
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%,50%);
+  width: 400px;
+  border-radius: 10px;
+}
+
+.center h1{
+  text-align: center;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #639c9c;
+  color: #005673;
+}
+
+.center form{
+  padding: 0 40px;
+}
+
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #005673;
+  margin: 30px 0;
+}
+
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #639c9c;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color:#005673
+}
+
+.boton{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #005673;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 15px;
+}

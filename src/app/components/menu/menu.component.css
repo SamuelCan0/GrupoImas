@@ -1,0 +1,27 @@
+.menus{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar{
+  padding: 20px 0;
+}
+
+.navbar-brand{
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #fff;
+}
+
+.bg-menu{
+  background: #7dc7c7;
+}
+
+.nav-item{
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+

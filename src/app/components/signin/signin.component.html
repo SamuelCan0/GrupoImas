@@ -1,0 +1,16 @@
+<div class="body">
+  <div class="center card">
+    <h1>Iniciar Sesión</h1>
+    <form (submit)="signIn()">
+      <div class="txt_field">
+        <input type="text" required [(ngModel)]="usuario.username" name="username" #username="ngModel" [ngModelOptions]="{standalone:true}">
+        <label>Usuario</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" required [(ngModel)]="usuario.password"  name="password" #password="ngModel" [ngModelOptions]="{standalone:true}">
+        <label>Contraseña</label>
+      </div>
+      <input class="boton" type="submit" value="Iniciar Sesión">
+    </form>
+  </div>
+</div>

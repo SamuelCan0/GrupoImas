@@ -1,0 +1,43 @@
+.padding{
+  margin: 20px;;
+}
+
+.bg{
+  background: #fff;
+}
+
+.textos{
+  color: #005673;
+  margin-top: 10px;
+  font-size: medium;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.title h2{
+  color: #005673;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.spiner{
+  margin-left: 50%;
+}
+
+.textarea{
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 220px;
+  min-width: 100%;
+  margin-bottom: 10px;
+}
